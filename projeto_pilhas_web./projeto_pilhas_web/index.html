@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividades com Pilhas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Atividades com Pilhas</h1>
+    <p>Três exemplos práticos de estrutura de dados Stack usando JavaScript.</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>1. Conversão Decimal para Binário</h2>
+      <p>Digite um número inteiro positivo. Os restos das divisões serão armazenados em uma pilha.</p>
+      <form id="form-binario">
+        <label for="decimal">Número decimal</label>
+        <div class="linha">
+          <input type="number" id="decimal" min="0" step="1" placeholder="Ex.: 25" required>
+          <button type="submit">Converter</button>
+        </div>
+      </form>
+      <div class="resultado" id="resultado-binario" aria-live="polite">O resultado aparecerá aqui.</div>
+      <div class="pilha-area">
+        <strong>Pilha de restos (topo primeiro)</strong>
+        <div id="pilha-binario" class="pilha"><span class="vazio">Pilha vazia</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2. Balanceamento de Parênteses</h2>
+      <p>Digite uma expressão. O sistema verifica se todos os parênteses foram abertos e fechados corretamente.</p>
+      <form id="form-parenteses">
+        <label for="expressao">Expressão</label>
+        <div class="linha">
+          <input type="text" id="expressao" placeholder="Ex.: (a + b) * (c - d)" required>
+          <button type="submit">Verificar</button>
+        </div>
+      </form>
+      <div class="resultado" id="resultado-parenteses" aria-live="polite">A validação aparecerá aqui.</div>
+      <div class="pilha-area">
+        <strong>Pilha durante a verificação</strong>
+        <div id="pilha-parenteses" class="pilha"><span class="vazio">Pilha vazia</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3. Histórico de Edição (Ctrl + Z)</h2>
+      <p>Digite ou edite o texto. Cada alteração é guardada na pilha e pode ser desfeita.</p>
+      <label for="texto">Seu texto</label>
+      <textarea id="texto" rows="6" placeholder="Comece a digitar aqui..."></textarea>
+      <div class="botoes">
+        <button type="button" id="desfazer">↶ Desfazer (Ctrl + Z)</button>
+        <button type="button" class="secundario" id="limpar">Limpar texto</button>
+      </div>
+      <div class="resultado" id="resultado-historico" aria-live="polite">Nenhuma alteração desfeita.</div>
+      <div class="pilha-area">
+        <strong>Histórico de versões (mais recente no topo)</strong>
+        <div id="pilha-historico" class="pilha"><span class="vazio">Nenhuma versão salva</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Projeto de Estrutura de Dados — Pilhas (Stack)</footer>
+  <script src="script.js"></script>
+</body>
+</html>

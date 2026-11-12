@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.topo {
+  background: #183b56;
+  color: white;
+  text-align: center;
+  padding: 32px 16px;
+}
+
+.topo h1 {
+  margin: 0 0 8px;
+}
+
+.topo p {
+  margin: 0;
+  color: #dbeafe;
+}
+
+.container {
+  width: min(900px, 92%);
+  margin: 28px auto;
+  display: grid;
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #183b56;
+}
+
+.card p {
+  color: #64748b;
+  line-height: 1.5;
+}
+
+label, .pilha-area strong {
+  display: block;
+  margin: 14px 0 8px;
+  font-weight: bold;
+}
+
+.linha {
+  display: flex;
+  gap: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+button {
+  border: 0;
+  border-radius: 7px;
+  padding: 12px 18px;
+  background: #1976d2;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button:hover {
+  background: #125da8;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.secundario {
+  background: #64748b;
+}
+
+.secundario:hover {
+  background: #475569;
+}
+
+.resultado {
+  margin-top: 16px;
+  padding: 13px;
+  background: #eff6ff;
+  border-left: 4px solid #1976d2;
+  border-radius: 5px;
+  overflow-wrap: anywhere;
+}
+
+.resultado.sucesso {
+  background: #ecfdf5;
+  border-color: #16a34a;
+}
+
+.resultado.erro {
+  background: #fef2f2;
+  border-color: #dc2626;
+}
+
+.pilha-area {
+  margin-top: 14px;
+}
+
+.pilha {
+  min-height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px dashed #94a3b8;
+  border-radius: 7px;
+}
+
+.item-pilha {
+  min-width: 38px;
+  padding: 9px;
+  text-align: center;
+  color: white;
+  background: #183b56;
+  border-radius: 5px;
+  overflow-wrap: anywhere;
+}
+
+.item-pilha.topo-pilha {
+  background: #1976d2;
+  outline: 2px solid #93c5fd;
+}
+
+.vazio {
+  color: #94a3b8;
+}
+
+footer {
+  text-align: center;
+  padding: 22px;
+  color: #64748b;
+}
+
+@media (max-width: 600px) {
+  .linha {
+    flex-direction: column;
+  }
+
+  .linha button {
+    width: 100%;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}
